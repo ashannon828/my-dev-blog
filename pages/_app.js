@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/prop-types */
-import '../styles/globals.css';
-import React, { Component } from 'react';
+import * as React from 'react';
+
+// 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react';
 
-function MyApp({ pageProps }) {
+// eslint-disable-next-line react/prop-types
+function MyApp({ Component, pageProps }) {
+  // 2. Use at the root of your app
   return (
     <ChakraProvider>
       <Component {...pageProps} />
