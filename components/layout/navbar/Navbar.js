@@ -6,10 +6,8 @@ function Navbar() {
   return (
     <Flex
       width="100%"
-      paddingLeft={{ sm: '20px', md: '30px' }}
-      paddingRight={{ sm: '20px', md: '10px' }}
       justifyContent="space-between"
-      height={{ sm: '40px', md: '80px' }}
+      height={{ sm: '60px', md: '80px' }}
       as="nav"
     >
       <Button variant="link">
@@ -19,7 +17,7 @@ function Navbar() {
         <MenuItem href="/" text="Home" />
         <MenuItem href="/about" text="About" />
         <MenuItem href="/blog" text="Blog" />
-        <MenuItem href="/blog" text="Portfolio" />
+        <MenuItem href="/portfolio" text="Portfolio" />
       </Flex>
     </Flex>
   );
