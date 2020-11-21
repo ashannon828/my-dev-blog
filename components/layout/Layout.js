@@ -12,7 +12,7 @@ function Layout(props) {
         <Navbar />
         <Flex width={{ base: '100%', md: '700px' }}>
           <Flex
-            paddingTop={{ base: '10px', md: '20px' }}
+            mt={{ base: '10px', md: '20px' }}
             px={{ base: '20px', md: 0 }}
             direction="column"
           >
