@@ -8,7 +8,7 @@ import Layout from '../components/layout/Layout';
 function index() {
   return (
     <Layout>
-      <Heading>Hey, I&apos;m Andrew Shannon</Heading>
+      <Heading>Hi, I&apos;m Andrew Shannon 👋</Heading>
       <Text>
         I&apos;m in the midst of transitioning from being a big data guy to
         being a front end guy. I currently work as a UX writer at{' '}

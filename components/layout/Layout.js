@@ -4,13 +4,13 @@ import Navbar from './navbar/Navbar';
 
 function Layout(props) {
   return (
-    <Stack alignItems="center" mx="10px" as="main">
-      <Navbar />
-      <Box width="700px">
-        <Flex mt="10px" bg="tomato" width="100%" direction="column">
+    <Stack width="100%" as="main">
+      <Flex alignItems="center" direction="column">
+        <Navbar />
+        <Flex px="20px" maxW="700px" direction="column">
           {props.children}
         </Flex>
-      </Box>
+      </Flex>
     </Stack>
   );
 }

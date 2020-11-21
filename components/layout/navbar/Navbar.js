@@ -1,21 +1,26 @@
 import React from 'react';
-import { Box, Flex } from '@chakra-ui/react';
+import { Button, Flex, Link } from '@chakra-ui/react';
 import MenuItem from './MenuItem';
 
 function Navbar() {
   return (
     <Flex
-      bg="tomato"
-      height="60px"
       width="100%"
+      paddingLeft={{ sm: '20px', md: '30px' }}
+      paddingRight={{ sm: '20px', md: '10px' }}
+      justifyContent="space-between"
+      height={{ sm: '40px', md: '80px' }}
       as="nav"
-      justifyItems="flex-end"
     >
-      <Box bg="white" maxW="700px">
+      <Button variant="link">
+        <Link href="/">AS</Link>
+      </Button>
+      <Flex alignItems="center">
         <MenuItem href="/" text="Home" />
         <MenuItem href="/about" text="About" />
         <MenuItem href="/blog" text="Blog" />
-      </Box>
+        <MenuItem href="/blog" text="Portfolio" />
+      </Flex>
     </Flex>
   );
 }
