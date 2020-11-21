@@ -6,7 +6,7 @@ function BlogPostCard() {
     <Flex mt="40px">
       <Link href="/">
         <Flex direction="column">
-          <Heading>This is a Blog Post Title</Heading>
+          <Heading size="md">This is a Blog Post Title</Heading>
           <Text mt="10px">
             I am describing my blog post. Not quite sure what I should put here
             but it&apos;s good.
