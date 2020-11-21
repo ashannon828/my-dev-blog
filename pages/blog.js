@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 function blog() {
   return (
     <Layout>
-      <Heading>Blog</Heading>
+      <Heading>Blog📓</Heading>
     </Layout>
   );
 }

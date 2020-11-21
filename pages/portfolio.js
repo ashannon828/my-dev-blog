@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 function portfolio() {
   return (
     <Layout>
-      <Heading>Portfolio</Heading>
+      <Heading>Portfolio💼</Heading>
     </Layout>
   );
 }

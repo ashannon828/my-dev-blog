@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 function about() {
   return (
     <Layout>
-      <Heading>About</Heading>
+      <Heading>About Me 👨‍💻</Heading>
     </Layout>
   );
 }
