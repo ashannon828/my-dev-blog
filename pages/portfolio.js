@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Heading, Text } from '@chakra-ui/react';
 import Layout from '../components/layout/Layout';
 
 function portfolio() {
