@@ -3,9 +3,9 @@ import { Button, Link } from '@chakra-ui/react';
 
 function menuItem(props) {
   return (
-    <Button variant="ghost">
-      <Link href={props.href}>{props.text}</Link>
-    </Button>
+    <Link href={props.href}>
+      <Button variant="ghost">{props.text}</Button>
+    </Link>
   );
 }
 
