@@ -1,16 +1,28 @@
-import Layout from '../../components/layout/Layout';
+import PostLayout from '../../components/layout/PostLayout';
+import Syntax from '../../components/Syntax';
 
-export default ({ children }) => <Layout>{children}</Layout>;
+export const meta = {
+  title: 'Some title from meta',
+  author: 'Andrew Shannon',
+  date: 'Nov 23, 2020',
+};
+
+export default ({ children }) => (
+  <PostLayout meta={meta}>{children}</PostLayout>
+);
 
 I **love** using [Next.js](https://nextjs.org/).
 
-It lets me write markdown and other pleasant stuff. Let's use this as a markdown example even though there's not much here. It has a code block and some text.
+It lets me write markdown and other pleasant stuff. Let's use this as a markdown
+example even though there's not much here. It has a code block and some text.
 
-```js
-function xyz(num) {
-  const asdf = num;
-  return num;
-}
-```
+<br />
+
+<Syntax>
+  {`function xyz(num) {
+    const asdf = num;
+    return num;
+  }`}
+</Syntax>
 
 I am writing after the code block now. Check out [my portfolio](https://andrewshannon.us/portfolio).
