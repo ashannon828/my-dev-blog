@@ -4,8 +4,6 @@ import React from 'react';
 import { Heading, Text } from '@chakra-ui/react';
 import Layout from './Layout';
 
-import Syntax from '../Syntax';
-
 function PostLayout({ meta, children }) {
   const { title, author, date } = meta;
   return (
