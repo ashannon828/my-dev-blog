@@ -5,7 +5,14 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <Box w="100%" h="150px" mt="40px" bg="gray.100">
+    <Box
+      position="absolute"
+      bottom={0}
+      w="100%"
+      h="150px"
+      mt="40px"
+      bg="gray.100"
+    >
       <Flex mt="20px" ali justifyContent="center">
         <Link
           _hover={{

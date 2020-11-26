@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 function Layout({ children }) {
   return (
-    <Box minH="100px" as="main">
+    <Box minH="100vh" as="main">
       <NextSeo
         title="Andrew Shannon - Frontend Dev"
         description="This blog has things I find interesting on it."
