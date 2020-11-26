@@ -1,5 +1,6 @@
 import PostLayout from '../../components/layout/PostLayout';
-import Syntax from '../../components/Syntax';
+
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 export const meta = {
   title: 'Some title from meta',
@@ -13,16 +14,19 @@ export default ({ children }) => (
 
 I **love** using [Next.js](https://nextjs.org/).
 
-It lets me write markdown and other pleasant stuff. Let's use this as a markdown
-example even though there's not much here. It has a code block and some text.
+It lets me write markdown and other pleasant stuff. Let's use this as a markdown example even though there's not much here. It has a code block and some text.
+```js
+function xyz(num){
+  const asdf = num;
+  return num;
+}
+```
+asdf 
 
-<br />
-
-<Syntax>
-  {`function xyz(num) {
-    const asdf = num;
-    return num;
-  }`}
-</Syntax>
-
+```js
+function xyz(num){
+  const asdf = num;
+  return num;
+}
+```
 I am writing after the code block now. Check out [my portfolio](https://andrewshannon.us/portfolio).

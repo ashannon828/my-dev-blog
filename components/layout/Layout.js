@@ -1,10 +1,16 @@
 import React from 'react';
-import { Flex, Stack } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
 import Navbar from './navbar/Navbar';
+import Footer from './Footer';
 
-function Layout(props) {
+function Layout({ children }) {
   return (
-    <Stack width="100%" as="main">
+    <Box minH="100px" as="main">
+      <NextSeo
+        title="Andrew Shannon - Frontend Dev"
+        description="This blog has things I find interesting on it."
+      />
       <Flex
         alignItems={{ base: 'flex-start', md: 'center' }}
         direction="column"
@@ -16,11 +22,12 @@ function Layout(props) {
             px={{ base: '20px', md: 0 }}
             direction="column"
           >
-            {props.children}
+            {children}
           </Flex>
         </Flex>
+        <Footer />
       </Flex>
-    </Stack>
+    </Box>
   );
 }
 
