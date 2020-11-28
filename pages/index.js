@@ -10,7 +10,12 @@ import ProjectCard from '../components/ProjectCard';
 function index() {
   return (
     <Layout>
-      <Heading>Hi, I&apos;m Andrew Shannon 👋</Heading>
+      <Heading as="h3" size="sm">
+        Hey there 👋
+      </Heading>
+      <Heading as="h1" size="2xl">
+        I&apos;m Andrew Shannon
+      </Heading>
       <Text pt="10px">
         I&apos;m in the midst of transitioning from being a big data guy to
         being a front end guy. I currently work as a UX writer at{' '}

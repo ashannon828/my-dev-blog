@@ -23,10 +23,25 @@ function xyz(num){
 ```
 asdf 
 
-```js
-function xyz(num){
-  const asdf = num;
-  return num;
+```jsx
+import React, { Component } from 'react';   
+import FormContainer from './containers/FormContainer';
+
+class App extends Component {  
+  render() {
+    return (
+      <div className="container">
+        <div className="columns">
+          <div className="col-md-9 centered">
+            <h3>React.js Controlled Form Components</h3>
+            <FormContainer />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
+
+export default App;
 ```
 I am writing after the code block now. Check out [my portfolio](https://andrewshannon.us/portfolio).

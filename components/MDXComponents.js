@@ -2,12 +2,19 @@
 import React from 'react';
 import { Box, Heading, Link, Text } from '@chakra-ui/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/github';
 
 const SyntaxHighlighter = (props) => {
   const codeBlock = props.children.props.children;
   const language = props.children.props.className.replace(/language-/, '');
   return (
-    <Highlight {...defaultProps} code={codeBlock} language={language}>
+    <Highlight
+      pt={10}
+      {...defaultProps}
+      code={codeBlock}
+      language={language}
+      theme={theme}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
           <pre padding="10px" className={className} style={style}>
@@ -30,7 +37,14 @@ const MDXComponents = {
   h2: (props) => <Heading as="h2" {...props} />,
   h3: (props) => <Heading as="h3" {...props} />,
   br: (props) => <Box {...props} />,
-  a: (props) => <Link fontWeight="bold" color="purple.400" {...props} />,
+  a: (props) => (
+    <Link
+      fontWeight="bold"
+      color="purple.600"
+      _hover={{ color: 'purple.300', textDecoration: 'underline' }}
+      {...props}
+    />
+  ),
   p: (props) => <Text as="p" {...props} />,
   ul: (props) => <Box as="ul" {...props} />,
   li: (props) => <Box as="li" {...props} />,
