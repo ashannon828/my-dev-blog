@@ -1,33 +1,39 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Box, Heading, Link, Text } from '@chakra-ui/react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+// import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/github';
+import Highlight, { defaultProps } from 'prism-react-renderer';
 
-const SyntaxHighlighter = (props) => {
+const CodeBlock = (props) => {
   const codeBlock = props.children.props.children;
   const language = props.children.props.className.replace(/language-/, '');
   return (
     <Highlight
-      pt={10}
       {...defaultProps}
       code={codeBlock}
       language={language}
       theme={theme}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => {
-        return (
-          <pre padding="10px" className={className} style={style}>
-            {tokens.map((line, i) => (
-              <Box key={i} {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </Box>
-            ))}
-          </pre>
-        );
-      }}
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre
+          className={className}
+          style={{
+            ...style,
+            padding: '20px',
+            borderRadius: '15px',
+            overflowX: 'scroll',
+          }}
+        >
+          {tokens.map((line, i) => (
+            <div key={i} {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
     </Highlight>
   );
 };
@@ -36,7 +42,7 @@ const MDXComponents = {
   h1: (props) => <Heading as="h1" {...props} />,
   h2: (props) => <Heading as="h2" {...props} />,
   h3: (props) => <Heading as="h3" {...props} />,
-  br: (props) => <Box {...props} />,
+  br: (props) => <br {...props} />,
   a: (props) => (
     <Link
       fontWeight="bold"
@@ -48,7 +54,7 @@ const MDXComponents = {
   p: (props) => <Text as="p" {...props} />,
   ul: (props) => <Box as="ul" {...props} />,
   li: (props) => <Box as="li" {...props} />,
-  pre: (props) => <SyntaxHighlighter {...props} />,
+  pre: (props) => <CodeBlock {...props} />,
 };
 
 export default MDXComponents;
