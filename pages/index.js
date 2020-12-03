@@ -7,6 +7,8 @@ import Layout from '../components/layout/Layout';
 import BlogPostCard from '../components/BlogPostCard';
 import ProjectCard from '../components/ProjectCard';
 
+import ExpatriantImg from '../public/projectImages/expatriant.png';
+
 function index() {
   return (
     <Layout>
@@ -27,9 +29,12 @@ function index() {
       <BlogPostCard />
       <BlogPostCard />
       <Heading mt={{ base: '60px', md: '80px' }}>Recent Projects:</Heading>
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <ProjectCard
+        url="https://jobs.expatriant.com/"
+        projectImg={ExpatriantImg}
+        projectName="Expatriant Job Board"
+        projectDesc="A job board focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
+      />
     </Layout>
   );
 }
