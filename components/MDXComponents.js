@@ -20,8 +20,10 @@ const CodeBlock = (props) => {
           className={className}
           style={{
             ...style,
+            margin: '20px 0',
             padding: '20px',
             borderRadius: '15px',
+            maxWidth: '700px',
             overflowX: 'scroll',
           }}
         >
@@ -42,7 +44,7 @@ const MDXComponents = {
   h1: (props) => <Heading as="h1" {...props} />,
   h2: (props) => <Heading as="h2" {...props} />,
   h3: (props) => <Heading as="h3" {...props} />,
-  br: (props) => <br {...props} />,
+  br: (props) => <Box {...props} />,
   a: (props) => (
     <Link
       fontWeight="bold"

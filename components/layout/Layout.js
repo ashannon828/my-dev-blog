@@ -16,7 +16,7 @@ function Layout({ children }) {
         direction="column"
       >
         <Navbar />
-        <Flex width={{ base: '100%', md: '700px' }}>
+        <Box width={{ base: '100%', md: '700px' }}>
           <Flex
             mt={{ base: '10px', md: '20px' }}
             px={{ base: '20px', md: 0 }}
@@ -24,7 +24,7 @@ function Layout({ children }) {
           >
             {children}
           </Flex>
-        </Flex>
+        </Box>
         <Footer />
       </Flex>
     </Box>
