@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Box, Heading, Link, Text } from '@chakra-ui/react';
-// import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/github';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/github';
 
 const CodeBlock = (props) => {
   const codeBlock = props.children.props.children;
@@ -44,7 +43,7 @@ const MDXComponents = {
   h1: (props) => <Heading as="h1" {...props} />,
   h2: (props) => <Heading as="h2" {...props} />,
   h3: (props) => <Heading as="h3" {...props} />,
-  br: (props) => <Box {...props} />,
+  br: (props) => <Box as="br" {...props} />,
   a: (props) => (
     <Link
       fontWeight="bold"
@@ -53,7 +52,7 @@ const MDXComponents = {
       {...props}
     />
   ),
-  p: (props) => <Text as="p" {...props} />,
+  p: (props) => <Text p="15px 0" as="p" {...props} />,
   ul: (props) => <Box as="ul" {...props} />,
   li: (props) => <Box as="li" {...props} />,
   pre: (props) => <CodeBlock {...props} />,
