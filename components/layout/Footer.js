@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Flex, Link, Icon } from '@chakra-ui/react';
+import { Box, Flex, Link, Icon, IconButton } from '@chakra-ui/react';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
 function Footer() {
   return (
@@ -13,26 +15,37 @@ function Footer() {
       mt="40px"
       bg="gray.100"
     >
-      <Flex mt="20px" ali justifyContent="center">
+      <Flex mt="40px" ali justifyContent="center">
         <Link
           _hover={{
             color: 'purple.300',
           }}
-          color="purple.600"
-          m="10px"
+          m="0 30px"
           href="https://github.com/ashannon828"
         >
-          <Icon w={8} h={8} as={FaGithub} />
+          <IconButton
+            variant="outline"
+            colorScheme="purple"
+            aria-label="My Github"
+            size="lg"
+            icon={<FiGithub />}
+          />
         </Link>
+
         <Link
           _hover={{
             color: 'purple.300',
           }}
-          color="purple.600"
-          m="10px"
+          m="0 30px"
           href="https://www.linkedin.com/in/andrew-shannon-23117856/"
         >
-          <Icon w={8} h={8} as={FaLinkedin} />
+          <IconButton
+            variant="outline"
+            colorScheme="purple"
+            aria-label="My LinkedIn"
+            size="lg"
+            icon={<FiLinkedin />}
+          />
         </Link>
       </Flex>
     </Box>
