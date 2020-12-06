@@ -16,10 +16,10 @@ function about() {
       <Text m="15px 0" as="p">
         I’m in the process of transitoning from a big data guy into a front end
         developer. My programming journey began the same way as, well, probably
-        everyone else’s — with “Hello World”.
+        everyone else’s — with “Hello World”. I love being able to create
+        anything I think is cool or interestng.
       </Text>
       <Text m="15px 0" as="p">
-        I love being able to create anything I think is cool or interestng.
         While most projects that I create end up dying on my hard drive (I’m
         looking at you compound interest calculator), I’m proud to say I’ve
         launched a functioning job board that I’m constantly adding features to.

@@ -8,6 +8,7 @@ import BlogPostCard from '../components/BlogPostCard';
 import ProjectCard from '../components/ProjectCard';
 
 import ExpatriantImg from '../public/projectImages/expatriant.png';
+import ThisBlog from '../public/projectImages/thisBlog.png';
 
 function index() {
   return (
@@ -24,16 +25,22 @@ function index() {
         <Icon as={FaWix} w={7} h={7} />. This is my dev blog that I&apos;ll use
         to explore things I find interesting.
       </Text>
-      <Heading mt={{ base: '40px', md: '80px' }}>Recent Posts:</Heading>
+      <Heading mt={{ base: '40px', md: '60px' }}>Recent Posts:</Heading>
       <BlogPostCard />
       <BlogPostCard />
       <BlogPostCard />
-      <Heading mt={{ base: '60px', md: '80px' }}>Recent Projects:</Heading>
+      <Heading mt={{ base: '60px', md: '60px' }}>Recent Projects:</Heading>
       <ProjectCard
         url="https://jobs.expatriant.com/"
         projectImg={ExpatriantImg}
         projectName="Expatriant Job Board"
         projectDesc="A job board focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
+      />
+      <ProjectCard
+        url="https:/andrewshannon.us/"
+        projectImg={ThisBlog}
+        projectName="My Programming Blog (This Blog 😁)"
+        projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
       />
     </Layout>
   );
