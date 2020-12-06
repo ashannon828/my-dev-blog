@@ -18,13 +18,13 @@ function index() {
       <Heading as="h1" size="2xl">
         I&apos;m Andrew Shannon
       </Heading>
-      <Text pt="10px">
+      <Text mt="30px" mb="15px" as="p">
         I&apos;m in the midst of transitioning from being a big data guy to
         being a front end guy. I currently work as a UX writer at{' '}
         <Icon as={FaWix} w={7} h={7} />. This is my dev blog that I&apos;ll use
         to explore things I find interesting.
       </Text>
-      <Heading mt={{ base: '60px', md: '80px' }}>Recent Posts:</Heading>
+      <Heading mt={{ base: '40px', md: '80px' }}>Recent Posts:</Heading>
       <BlogPostCard />
       <BlogPostCard />
       <BlogPostCard />
