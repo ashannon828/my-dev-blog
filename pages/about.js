@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Heading, Flex, Image, Text } from '@chakra-ui/react';
-import Layout from '../components/layout/Layout';
+import { Heading, Flex, Image, Text } from '@chakra-ui/react';
+import Layout from '../components/layouts/Layout';
 import picOfMe from '../public/me.jpeg';
 
 function about() {

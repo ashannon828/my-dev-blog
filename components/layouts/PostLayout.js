@@ -4,11 +4,12 @@ import React from 'react';
 import { Box, Flex, Image, Heading, Text } from '@chakra-ui/react';
 import Layout from './Layout';
 
-function PostLayout({ meta, children }) {
-  const { title, author, date, imgSrc } = meta;
+function PostLayout({ children frontMatter}) {
+  // console.log(frontMatter);
+  // const { title, author, date, imgSrc } = frontMatter;
   return (
     <Layout>
-      <Heading as="h1" size="2xl">
+      {/* <Heading as="h1" size="2xl">
         {title}
       </Heading>
       <Flex m="20px 0">
@@ -16,7 +17,7 @@ function PostLayout({ meta, children }) {
         <Text>
           {author} / {date}
         </Text>
-      </Flex>
+      </Flex> */}
       <Box as="article">{children}</Box>
     </Layout>
   );

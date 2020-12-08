@@ -3,7 +3,7 @@ import React from 'react';
 import { Heading, Text, Icon } from '@chakra-ui/react';
 import { FaWix } from 'react-icons/fa';
 
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layouts/Layout';
 import BlogPostCard from '../components/BlogPostCard';
 import ProjectCard from '../components/ProjectCard';
 

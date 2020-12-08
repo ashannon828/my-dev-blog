@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layouts/Layout';
 
 function blog() {
   return (

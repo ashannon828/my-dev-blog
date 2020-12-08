@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import Navbar from './navbar/Navbar';
-import Footer from './Footer';
+import Navbar from '../navbar/Navbar';
+import Footer from '../Footer';
 
 function Layout({ children }) {
   return (
