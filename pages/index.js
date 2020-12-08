@@ -34,10 +34,10 @@ function index() {
         url="https://jobs.expatriant.com/"
         projectImg={ExpatriantImg}
         projectName="Expatriant Job Board"
-        projectDesc="A job board focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
+        projectDesc="A full stack job board app focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
       />
       <ProjectCard
-        url="https:/andrewshannon.us/"
+        url="/"
         projectImg={ThisBlog}
         projectName="My Programming Blog (This Blog 😁)"
         projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
