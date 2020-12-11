@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Flex, Link, Icon, IconButton } from '@chakra-ui/react';
-
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Box, Flex, Link, IconButton } from '@chakra-ui/react';
 
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
@@ -15,7 +13,7 @@ function Footer() {
       mt="40px"
       bg="gray.100"
     >
-      <Flex mt="40px" ali justifyContent="center">
+      <Flex mt="40px" justifyContent="center">
         <Link
           _hover={{
             color: 'purple.300',

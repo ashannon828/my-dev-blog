@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Flex, Image, Text } from '@chakra-ui/react';
 import Layout from '../components/layouts/Layout';
-import picOfMe from '../public/me.jpeg';
+import picOfMe from '../public/static/images/author/me.jpeg';
 
 function about() {
   return (

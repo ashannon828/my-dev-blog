@@ -7,8 +7,8 @@ import Layout from '../components/layouts/Layout';
 import BlogPostCard from '../components/BlogPostCard';
 import ProjectCard from '../components/ProjectCard';
 
-import ExpatriantImg from '../public/projectImages/expatriant.png';
-import ThisBlog from '../public/projectImages/thisBlog.png';
+import ExpatriantImg from '../public/static/images/project/expatriant.png';
+import ThisBlog from '../public/static/images/project/thisBlog.png';
 
 function index() {
   return (

@@ -4,20 +4,21 @@ import React from 'react';
 import { Box, Flex, Image, Heading, Text } from '@chakra-ui/react';
 import Layout from './Layout';
 
-function PostLayout({ children frontMatter}) {
-  // console.log(frontMatter);
-  // const { title, author, date, imgSrc } = frontMatter;
+function PostLayout(props) {
+  const { children, frontMatter } = props;
+  const { authoredBy, title, publishedOn, authImg, summary } = frontMatter;
+
   return (
     <Layout>
-      {/* <Heading as="h1" size="2xl">
+      <Heading as="h1" size="2xl">
         {title}
       </Heading>
       <Flex m="20px 0">
-        <Image mr="10px" borderRadius="full" boxSize="24px" src={imgSrc} />
+        <Image mr="10px" borderRadius="full" boxSize="24px" src={authImg} />
         <Text>
-          {author} / {date}
+          {authoredBy} / {publishedOn}
         </Text>
-      </Flex> */}
+      </Flex>
       <Box as="article">{children}</Box>
     </Layout>
   );
