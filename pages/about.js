@@ -1,7 +1,6 @@
 import React from 'react';
 import { Heading, Flex, Image, Text } from '@chakra-ui/react';
 import Layout from '../components/layouts/Layout';
-import picOfMe from '../public/static/images/author/me.jpeg';
 
 function about() {
   return (
@@ -29,7 +28,12 @@ function about() {
         exploring my new city, Kyiv, Ukraine.
       </Text>
       <Flex m="30px 0 15px 0" justifyContent="center">
-        <Image align="center" mr="10px" borderRadius="full" src={picOfMe} />
+        <Image
+          align="center"
+          mr="10px"
+          borderRadius="full"
+          src="/static/images/author/me.jpg"
+        />
       </Flex>
     </Layout>
   );

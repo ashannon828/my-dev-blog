@@ -1,54 +1,53 @@
 ---
 layout: 'PostLayout'
-title: '2019 Year in Review'
-publishedOn: '2019-12-26'
+title: 'This is my first test post'
+publishedOn: '2019-12-24'
 authoredBy: 'Andrew Shannon'
 authImg: '/static/images/author/me.jpg'
 summary: 'Highlights and reflections on 2019 and a look forward to 2020.'
 ---
 
 
+Front-end tooling has rapidly progressed, and projects like styled-system and Theme UI make it easy to create components that easily adhere to your design system.
 
-I **love** using [Next.js](https://nextjs.org/).
+My site isn't anything crazy – mostly a few simple static pages and blog posts. While coding everything myself is a fun learning experience, there are plenty of component libraries that contain everything necessary to achieve the design I was aiming for. That's why I chose to adopt Chakra UI for my redesign.
 
-Back in May, I was browsing flights to Europe hoping to plan a vacation for the fall. Originally thinking Greece, I managed to notice a cheap flight from Des Moines to Venice. It seemed too good to be true.
-
-My fiancée and I decided to pull the trigger after realizing how many unused credit card reward points we had. There were only 4 seats left, so we quickly scrambled to grab our passports and fill out the information. We'd be starting and ending in Venice - the rest we would figure out later. A few minutes later, it was finalized.
-
-It lets me write markdown and other pleasant stuff. Let's use this as a markdown example even though there's not much here. It has a code block and some text.
-```js
-function xyz(num){
-  const asdf = num;
-  return num;
-}
-```
-asdf 
-
+It uses styled-system under the hood, allowing me to use style props
+The theme is extendable, allowing me to change fonts and add icons easily
+It includes a great set of accessible components out of the box
+Works well with Next.js and supports dark mode
+Here's a quick example of Chakra UI and styled-system. This is part of the source for the newsletter subscription at the bottom of this post.
 
 ```jsx
-const CodeBlock = (props) => {
-  const codeBlock = props.children.props.children;
-  const language = props.children.props.className.replace(/language-/, '');
-  return (
-    <Highlight {...defaultProps} code={codeBlock} language={language}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px' }}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  );
-};
+<Box
+  border="1px solid"
+  borderColor="blue.200"
+  bg="blue.50"
+  borderRadius={4}
+  padding={6}
+  my={4}
+>
+  <Heading as="h5" size="lg" mb={2}>
+    Subscribe to the newsletter
+  </Heading>
+  <Text>
+    Get emails from me about web development, tech, and early access to new
+    articles.
+  </Text>
+  <InputGroup size="md" mt={4}>
+    <Input
+      aria-label="Email for newsletter"
+      placeholder="tim@apple.com"
+      type="email"
+    />
+    <InputRightElement width="6.75rem">
+      <Button fontWeight="bold" h="1.75rem" size="sm">
+        Subscribe
+      </Button>
+    </InputRightElement>
+  </InputGroup>
+</Box>
 ```
 
-I am writing after the code block now. Check out [my portfolio](https://andrewshannon.us/portfolio).
+Using style props, I'm able to easily style my components while pulling values directly from my design system. For example, mb (short for margin-bottom) of 2 will translate to 0.5rem or ~8px.
 
-export default (frontMatter) => {
-  return frontMatter
-}
