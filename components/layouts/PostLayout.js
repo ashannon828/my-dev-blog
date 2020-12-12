@@ -4,10 +4,8 @@ import React from 'react';
 import { Box, Flex, Image, Heading, Text } from '@chakra-ui/react';
 import Layout from './Layout';
 
-function PostLayout(props) {
-  const { children, frontMatter } = props;
+function PostLayout({ children, frontMatter }) {
   const { authoredBy, title, publishedOn, authImg, summary } = frontMatter;
-
   return (
     <Layout>
       <Heading as="h1" size="2xl">

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Flex, Heading, Link, Text } from '@chakra-ui/react';
 
-function BlogPostCard() {
+function BlogPostCard({ title, summary }) {
   return (
     <Flex mt="40px">
       <Link href="/">
         <Flex direction="column">
-          <Heading size="md">This is a Blog Post Title</Heading>
+          <Heading size="md">{title}</Heading>
           <Text p="15px 0" as="p">
-            I am describing my blog post. Not quite sure what I should put here
-            but it&apos;s good.
+            {summary}
           </Text>
         </Flex>
       </Link>

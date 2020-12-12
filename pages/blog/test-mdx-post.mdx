@@ -7,7 +7,6 @@ authImg: '/static/images/author/me.jpg'
 summary: 'Highlights and reflections on 2019 and a look forward to 2020.'
 ---
 
-import { Highlight as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 
 I **love** using [Next.js](https://nextjs.org/).
@@ -49,3 +48,7 @@ const CodeBlock = (props) => {
 ```
 
 I am writing after the code block now. Check out [my portfolio](https://andrewshannon.us/portfolio).
+
+export default (frontMatter) => {
+  return frontMatter
+}

@@ -26,9 +26,6 @@ function index() {
         to explore things I find interesting.
       </Text>
       <Heading mt={{ base: '40px', md: '60px' }}>Recent Posts:</Heading>
-      <BlogPostCard />
-      <BlogPostCard />
-      <BlogPostCard />
       <Heading mt={{ base: '60px', md: '60px' }}>Recent Projects:</Heading>
       <ProjectCard
         url="https://jobs.expatriant.com/"
