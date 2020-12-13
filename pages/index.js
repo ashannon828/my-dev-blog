@@ -14,7 +14,7 @@ function index() {
   return (
     <Layout>
       <Heading as="h3" size="sm">
-        Hey there 👋
+        Hey 👋
       </Heading>
       <Heading as="h1" size="2xl">
         I&apos;m Andrew Shannon

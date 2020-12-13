@@ -1,0 +1,18 @@
+---
+layout: 'PostLayout'
+title: 'Import all of your MDX blog posts in NextJS with Import Glob Array'
+publishedOn: '2020-12-09'
+authoredBy: 'Andrew Shannon'
+authImg: '/static/images/author/me.jpg'
+summary: 'Import all of your MDX blog posts to create a blog index with NextJS and Babel Plugin Import Glob Array.'
+---
+
+Setting up a blog with NextJS and MDX is simple. You've just gotta set up a new Next app with `npx create-next-app` and install Next.js's MDX plug in with `npm install --save @next/mdx @mdx-js/loader`.
+
+This takes care of the most basic step - being able to render MDX as a react page. You can read more about that **HERE** (make a post for setting up Next and MDX). However, this makes creating a blog index difficult at scale because we'll need to manually add each post to the index.
+
+To solve this, we'll be using [next-mdx-enhanced](https://github.com/hashicorp/next-mdx-enhanced) by HashiCorp to let us use layouts and front front matter (more on that in a sec) and [babel-plugin-import-glob-array](https://github.com/jescalan/babel-plugin-import-glob-array) by Jeff Escalante so that we can bulk import posts into our blog index.
+
+Install next-mdx-enhanced with `npm install next-mdx-enhanced` and open up your `next.config.js` file.
+
+`npm install next-mdx-enhanced`

@@ -9,6 +9,7 @@ import { frontMatter as blogPosts } from './blog/*.mdx';
 
 function blog() {
   // const posts = postsSortedByDate
+
   return (
     <Layout>
       <Heading>Blog 📓</Heading>
