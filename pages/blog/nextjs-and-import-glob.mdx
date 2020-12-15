@@ -1,18 +1,91 @@
 ---
 layout: 'PostLayout'
-title: 'Import all of your MDX blog posts in NextJS with Import Glob Array'
-publishedOn: '2020-12-09'
+title: 'Bulk impport blog posts with next-mdx-enhanced and babel-plugin-import-glob-array` '
+publishedOn: '2020-12-16'
 authoredBy: 'Andrew Shannon'
 authImg: '/static/images/author/me.jpg'
-summary: 'Import all of your MDX blog posts to create a blog index with NextJS and Babel Plugin Import Glob Array.'
+summary: 'Import all of your MDX pages into a single index in Next.js using next-mdx-enhanced and babel-plugin-import-glob-array.'
 ---
 
-Setting up a blog with NextJS and MDX is simple. You've just gotta set up a new Next app with `npx create-next-app` and install Next.js's MDX plug in with `npm install --save @next/mdx @mdx-js/loader`.
+I set up this blog using Next.js and MDX a few weeks ago, but I found I had to manually hack together a blog index. Today, we'll look to automate this using [next-mdx-enhanced](https://github.com/hashicorp/next-mdx-enhanced) by HashiCorp so we can use layouts and front front matter (more on that in a sec) and [babel-plugin-import-glob-array](https://github.com/jescalan/babel-plugin-import-glob-array) by Jeff Escalante to bulk import posts into a blog index page.
 
-This takes care of the most basic step - being able to render MDX as a react page. You can read more about that **HERE** (make a post for setting up Next and MDX). However, this makes creating a blog index difficult at scale because we'll need to manually add each post to the index.
+I'll assume that you've already got Next.js and Next's MDX plugin configured, but if you don't, you can check out my post, "Building a static blog with Next.js and MDX".
 
-To solve this, we'll be using [next-mdx-enhanced](https://github.com/hashicorp/next-mdx-enhanced) by HashiCorp to let us use layouts and front front matter (more on that in a sec) and [babel-plugin-import-glob-array](https://github.com/jescalan/babel-plugin-import-glob-array) by Jeff Escalante so that we can bulk import posts into our blog index.
+First, we'll install next-mdx-enhanced with `npm install next-mdx-enhanced` and create a `next.config.js` and copy the starter config file into it.
 
-Install next-mdx-enhanced with `npm install next-mdx-enhanced` and open up your `next.config.js` file.
+```javascript
+// next.config.js
+const withMdxEnhanced = require('next-mdx-enhanced');
 
-`npm install next-mdx-enhanced`
+module.exports = withMdxEnhanced({
+  layoutPath: 'components/layouts',
+  defaultLayout: false,
+  fileExtensions: ['mdx'],
+  remarkPlugins: [],
+  rehypePlugins: [],
+  usesSrc: false,
+  extendFrontMatter: {
+    process: (mdxContent, frontMatter) => {},
+    phase: 'prebuild|loader|both',
+  },
+  reExportDataFetching: false,
+})(/* your normal nextjs config */);
+```
+
+If you've followed my previous post, then you should be all set. If not, make sure you update the `layoutPath` property with the layout you'd like to use with your post.
+
+Now go into your MDX posts and define the front matter. You can enter any properties that you'd like. Here's an example of what I'd include. Remember, this info is what will be accessible in your blog index.
+
+```yaml
+---
+layout: 'PostLayout'
+title: 'This is my first test post'
+publishedOn: '2019-12-24'
+authoredBy: 'Andrew Shannon'
+authImg: '/static/images/author/me.jpg'
+summary: 'This is some summary.'
+---
+```
+
+
+
+Next, we'll install babel-plugin-import-glob-array with `npm i babel-plugin-import-glob-array`. This library is what will allow us to bulk import all of the posts in our post directory using the wildcard character.
+
+Then we need to add it to our babel config. To do this, we'll create a `.babelrc` in our root directory and paste:
+
+```json
+{
+  "presets": ["next/babel"],
+  "plugins": ["import-glob-array"]
+}
+
+```
+
+The first property, presets includes everything we need to compile React. the plugins property is telling Babel that we'll be using babel-plugin-import-glob-array. 
+
+Now it's just a matter of importing our posts into our blog index.
+
+```jsx
+import BlogPostCard from '../components/BlogPostCard';
+import { frontMatter as blogPosts } from './blog/*.mdx';
+
+function blog() {
+  return (
+    <div>
+      <h1>Blog 📓</h1>
+      {blogPosts.map((frontMatter) => (
+        <BlogPostCard
+          key={frontMatter.title}
+          title={frontMatter.title}
+          summary={frontMatter.summary}
+          href={frontMatter.__resourcePath.replace('.mdx', '')}
+        />
+      ))}
+    </div>
+  );
+}
+```
+
+A couple things to note. Frontmatter comes with a property `__resourcePath` that we can use to generate the post's slug automatically. We've just gotta get rid of the file extension.
+
+That's it, you should have a very basic blog with a simple blog index. We'll expand on this in the next post because out of the box, the posts are not sorted by date. We'll need to create a helper function for this.

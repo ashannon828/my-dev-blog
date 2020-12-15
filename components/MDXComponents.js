@@ -40,8 +40,7 @@ const CodeBlock = (props) => {
 };
 
 const InlineCode = (props) => {
-  console.log(props);
-  return <Code />;
+  return <Code colorScheme="purple" {...props} />;
 };
 
 const MDXComponents = {
@@ -60,7 +59,7 @@ const MDXComponents = {
   p: (props) => <Text p="15px 0" as="p" {...props} />,
   ul: (props) => <Box as="ul" {...props} />,
   li: (props) => <Box as="li" {...props} />,
-  code: (props) => <InlineCode {...props} />,
+  inlineCode: (props) => <InlineCode {...props} />,
   pre: (props) => <CodeBlock {...props} />,
 };
 
