@@ -6,6 +6,7 @@ import Layout from './Layout';
 
 function PostLayout({ children, frontMatter }) {
   const { authoredBy, title, publishedOn, authImg, summary } = frontMatter;
+  console.log(authImg)
   return (
     <Layout>
       <Heading as="h1" size="2xl">
