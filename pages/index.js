@@ -5,12 +5,14 @@ import { FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
 import BlogPostCard from '../components/BlogPostCard';
+import { frontMatter as blogPosts } from './blog/*.mdx';
 import ProjectCard from '../components/ProjectCard';
 
 import ExpatriantImg from '../public/static/images/project/expatriant.png';
 import ThisBlog from '../public/static/images/project/thisBlog.png';
 
 function index() {
+  const sortedPosts = blogPosts.sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn)).slice(0, 2)
   return (
     <Layout>
       <Heading as="h3" size="sm">
@@ -26,6 +28,14 @@ function index() {
         to explore things I find interesting.
       </Text>
       <Heading mt={{ base: '40px', md: '60px' }}>Recent Posts:</Heading>
+      {sortedPosts.map((frontMatter) => (
+        <BlogPostCard
+          key={frontMatter.title}
+          title={frontMatter.title}
+          summary={frontMatter.summary}
+          href={frontMatter.__resourcePath.replace('.mdx', '')}
+        />
+      ))}
       <Heading mt={{ base: '60px', md: '60px' }}>Recent Projects:</Heading>
       <ProjectCard
         url="https://jobs.expatriant.com/"

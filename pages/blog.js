@@ -13,11 +13,10 @@ function blog() {
 
   console.log(sortedPosts)
 
-
   return (
     <Layout>
       <Heading>Blog 📓</Heading>
-      {blogPosts.map((frontMatter) => (
+      {sortedPosts.map((frontMatter) => (
         <BlogPostCard
           key={frontMatter.title}
           title={frontMatter.title}
