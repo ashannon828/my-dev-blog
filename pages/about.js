@@ -32,7 +32,7 @@ function about() {
           align="center"
           mr="10px"
           borderRadius="full"
-          src="/static/images/author/me.jpg"
+          src="/static/images/author/me.jpeg"
         />
       </Flex>
     </Layout>

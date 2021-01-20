@@ -1,0 +1,54 @@
+---
+layout: 'PostLayout'
+title: 'Sort an Array of Objects by Date in JavaScript'
+publishedOn: '2021-01-20'
+authoredBy: 'Andrew Shannon'
+authImg: '/static/images/author/me.jpeg'
+summary: 'Learn how to sort an array of objects in JavaScript by date.'
+---
+
+Sorting an array in JavaScript is simple enough with the `.sort` method. All you need to do is pass it a callback function to evaluate how it will be sorted. Sorting an array of objects by date is only slightly more difficult.
+
+In this example, we will sort an array of blog posts (as objects) that contain the following properties:
+
+- title
+- publishedOn
+
+And looks like:
+
+```json
+const blogPosts = [
+  {
+    title: 'Second Post',
+    publishedOn: '2020-12-31',
+  },
+  {
+    title: 'Third Post',
+    publishedOn: '2021-01-07',
+  },
+  {
+    title: 'First Post',
+    publishedOn: '2020-12-24',
+  },
+]
+```
+
+Looking at the data, we've got two problems. The first is that we will have to specify the property that we want to sort on. Second of all, we will need to convert the date string into a JavaScript Date object using `new Date`. 
+
+```js
+// Sort in descending order
+blogPosts.sort((a, b) => {
+  const dateA = new Date(a.publishedOn)
+  const dateB = new Date(b.publishedOn)
+  return dateB - dateA
+})
+
+// Sort in ascending order
+blogPosts.sort((a, b) => {
+  const dateA = new Date(a.publishedOn)
+  const dateB = new Date(b.publishedOn)
+  return dateA - dateB
+})
+```
+
+You can even use the callback function to evaluate more than one property, but I'll leave that up to you since this satisfies my use ;).

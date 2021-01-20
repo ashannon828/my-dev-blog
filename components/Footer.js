@@ -20,6 +20,7 @@ function Footer() {
           }}
           m="0 30px"
           href="https://github.com/ashannon828"
+          isExternal={true}
         >
           <IconButton
             variant="outline"
@@ -36,6 +37,7 @@ function Footer() {
           }}
           m="0 30px"
           href="https://www.linkedin.com/in/andrew-shannon-23117856/"
+          isExternal={true}
         >
           <IconButton
             variant="outline"
