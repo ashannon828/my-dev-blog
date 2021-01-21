@@ -4,8 +4,11 @@ import { Heading, Text, Icon } from '@chakra-ui/react';
 import { FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
-import BlogPostCard from '../components/BlogPostCard';
+
+import ExperienceCard from '../components/ExperienceCard'
 import { frontMatter as blogPosts } from './blog/*.mdx';
+import BlogPostCard from '../components/BlogPostCard';
+
 import ProjectCard from '../components/ProjectCard';
 
 import ExpatriantImg from '../public/static/images/project/expatriant.png';
@@ -27,6 +30,12 @@ function index() {
         <Icon as={FaWix} w={7} h={7} />. This is my dev blog that I&apos;ll use
         to explore things I find interesting.
       </Text>
+      <Heading mt={{ base: '40px', md: '60px' }}>Work Experience:</Heading>
+      <ExperienceCard company="Wix.com" jobTitle="UX Writer" empStartDate="February 2020" jobDescription="I write clear concise microcopy for Wix's Stores mobile app and their new Point of Sale product. I also manage the localization process ford 22 supported languages." />
+      <ExperienceCard company="Expatriant.com" jobTitle="Co-Founder & Full-stack Dev" empStartDate="September 2018" jobDescription="I post about living and working abroad, cost of living and built a full stack job board app to help expats find meaningful work." />
+      <ExperienceCard company="Cisco Systems" jobTitle="Business Analyst" empStartDate="July 2015" empEndDate="August 2018" jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake." />
+
+
       <Heading mt={{ base: '40px', md: '60px' }}>Recent Posts:</Heading>
       {sortedPosts.map((frontMatter) => (
         <BlogPostCard

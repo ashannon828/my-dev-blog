@@ -11,7 +11,6 @@ function blog() {
 
   const sortedPosts = blogPosts.sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn))
 
-  console.log(sortedPosts)
 
   return (
     <Layout>

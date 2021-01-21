@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Box, Code, Heading, Link, Text } from '@chakra-ui/react';
+import { Box, Code, Heading, List, Link, Text } from '@chakra-ui/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/github';
 
@@ -57,7 +57,8 @@ const MDXComponents = {
     />
   ),
   p: (props) => <Text p="15px 0" as="p" {...props} />,
-  ul: (props) => <Box as="ul" {...props} />,
+  ul: (props) => <Box pl='30px' as="ul" {...props} />,
+  ol: (props) => <Box pl='30px' as="ol" {...props} />,
   li: (props) => <Box as="li" {...props} />,
   inlineCode: (props) => <InlineCode {...props} />,
   pre: (props) => <CodeBlock {...props} />,
