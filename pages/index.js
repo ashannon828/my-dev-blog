@@ -38,28 +38,31 @@ function index() {
         <ExperienceCard company="Cisco Systems" jobTitle="Business Analyst" empStartDate="July 2015" empEndDate="August 2018" jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake." />
       </SectionComp>
 
-      <Heading mt={{ base: '40px', md: '60px' }}>Recent Posts:</Heading>
-      {sortedPosts.map((frontMatter) => (
-        <BlogPostCard
-          key={frontMatter.title}
-          title={frontMatter.title}
-          summary={frontMatter.summary}
-          href={frontMatter.__resourcePath.replace('.mdx', '')}
+      <SectionComp title="Posts">
+        {sortedPosts.map((frontMatter) => (
+          <BlogPostCard
+            key={frontMatter.title}
+            title={frontMatter.title}
+            summary={frontMatter.summary}
+            href={frontMatter.__resourcePath.replace('.mdx', '')}
+          />
+        ))}
+      </SectionComp>
+
+      <SectionComp title="Projects">
+        <ProjectCard
+          url="https://jobs.expatriant.com/"
+          projectImg={ExpatriantImg}
+          projectName="Expatriant Job Board"
+          projectDesc="A full stack job board app focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
         />
-      ))}
-      <Heading mt={{ base: '60px', md: '60px' }}>Recent Projects:</Heading>
-      <ProjectCard
-        url="https://jobs.expatriant.com/"
-        projectImg={ExpatriantImg}
-        projectName="Expatriant Job Board"
-        projectDesc="A full stack job board app focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
-      />
-      <ProjectCard
-        url="/"
-        projectImg={ThisBlog}
-        projectName="My Programming Blog (This Blog 😁)"
-        projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
-      />
+        <ProjectCard
+          url="/"
+          projectImg={ThisBlog}
+          projectName="My Programming Blog (This Blog)"
+          projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
+        />
+      </SectionComp>
     </Layout>
   );
 }
