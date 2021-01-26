@@ -38,7 +38,7 @@ function index() {
         <ExperienceCard company="Cisco Systems" jobTitle="Business Analyst" empStartDate="July 2015" empEndDate="August 2018" jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake." />
       </SectionComp>
 
-      <SectionComp title="Posts">
+      <SectionComp title="Blog Posts">
         {sortedPosts.map((frontMatter) => (
           <BlogPostCard
             key={frontMatter.title}
