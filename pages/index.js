@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Heading, Text, Icon } from '@chakra-ui/react';
-import { FaSmile, FaWix } from 'react-icons/fa';
+import { FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
 
