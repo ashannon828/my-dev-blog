@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import { Heading, Text, Icon } from '@chakra-ui/react';
+import { Box, Button, Heading, Text, Icon } from '@chakra-ui/react';
 import { FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
@@ -36,6 +36,9 @@ function index() {
         <ExperienceCard company="Wix.com" jobTitle="UX Writer" empStartDate="February 2020" jobDescription="I write clear concise microcopy for Wix's Stores mobile app and their new Point of Sale product. I also manage the localization process ford 22 supported languages." />
         <ExperienceCard company="Expatriant.com" jobTitle="Co-Founder & Full-stack Dev" empStartDate="September 2018" jobDescription="I post about living and working abroad, cost of living and built a full stack job board app to help expats find meaningful work." />
         <ExperienceCard company="Cisco Systems" jobTitle="Business Analyst" empStartDate="July 2015" empEndDate="August 2018" jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake." />
+        <Box p='20px' align="center" w='100%' >
+          <Button colorScheme="purple" >Download Resume</Button>
+        </Box>
       </SectionComp>
 
       <SectionComp title="Blog Posts">
