@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Heading, Text, Icon } from '@chakra-ui/react';
-import { FaWix } from 'react-icons/fa';
+import { FaSmile, FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
 
@@ -59,9 +59,10 @@ function index() {
         <ProjectCard
           url="/"
           projectImg={ThisBlog}
-          projectName="My Programming Blog (This Blog)"
+          projectName="My Programming Blog (This Blog 🙂)"
           projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
         />
+
       </SectionComp>
     </Layout>
   );
