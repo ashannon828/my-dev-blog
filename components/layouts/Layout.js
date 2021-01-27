@@ -6,7 +6,7 @@ import Footer from '../Footer';
 
 function Layout({ children }) {
   return (
-    <Box paddingBottom="190px" minH="100vh" as="main">
+    <Box paddingBottom="10rem" minH="100vh" as="main">
       <NextSeo
         title="Andrew Shannon - Frontend Dev"
         description="This blog has things I find interesting on it."
@@ -18,8 +18,8 @@ function Layout({ children }) {
         <Navbar />
         <Box width={{ base: '100%', md: '700px' }}>
           <Flex
-            mt={{ base: '10px', md: '20px' }}
-            px={{ base: '20px', md: 0 }}
+            mt='1rem'
+            px={{ base: '1rem', md: 0 }}
             direction="column"
           >
             {children}
