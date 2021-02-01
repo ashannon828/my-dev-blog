@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import { Box, Button, Heading, Text, Icon } from '@chakra-ui/react';
+import { Box, Button, Heading, Link, Text, Icon } from '@chakra-ui/react';
 import { FaWix } from 'react-icons/fa';
 
 import Layout from '../components/layouts/Layout';
@@ -14,6 +14,7 @@ import ProjectCard from '../components/ProjectCard';
 
 import ExpatriantImg from '../public/static/images/project/expatriant.png';
 import ThisBlog from '../public/static/images/project/thisBlog.png';
+
 
 function index() {
   const sortedPosts = blogPosts.sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn)).slice(0, 2)
@@ -38,7 +39,9 @@ function index() {
           <ExperienceCard company="Expatriant.com" jobTitle="Co-Founder & Full-stack Dev" empStartDate="September 2018" jobDescription="I post about living and working abroad, cost of living and built a full stack job board app to help expats find meaningful work." />
           <ExperienceCard company="Cisco Systems" jobTitle="Business Analyst" empStartDate="July 2015" empEndDate="August 2018" jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake." />
           <Box m='1rem' align="center" >
-            <Button colorScheme="purple" >Download Resume</Button>
+            <Link isExternal href='https://drive.google.com/file/d/1ixbGdlON_pFiqtZ3mG83C8HnIZoInWzI/view'>
+              <Button colorScheme="purple" >View Resume</Button>
+            </Link>
           </Box>
         </SectionComp>
 
@@ -64,7 +67,7 @@ function index() {
             url="/"
             projectImg={ThisBlog}
             projectName="My Programming Blog (This Blog 🙂)"
-            projectDesc="This blog is to document of my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
+            projectDesc="This blog is to document my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
           />
         </SectionComp>
       </Box>

@@ -1,19 +1,18 @@
 import React from 'react';
-import { Box, Flex, Link, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Link, IconButton, Text } from '@chakra-ui/react';
 
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
 function Footer() {
   return (
     <Box
-      position="absolute"
-      bottom={0}
+      position='absolute'
+      bottom='-2rem'
       w="100%"
-      h="150px"
-      mt="40px"
+      align="center"
       bg="gray.100"
     >
-      <Flex mt="40px" justifyContent="center">
+      <Flex mt="2rem" justifyContent="center">
         <Link
           _hover={{
             color: 'purple.300',
@@ -48,8 +47,12 @@ function Footer() {
           />
         </Link>
       </Flex>
+      <Text m='2rem 0'>Built with Next.js and hosted on Vercel</Text>
     </Box>
   );
 }
 
 export default Footer;
+
+
+// 
