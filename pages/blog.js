@@ -8,9 +8,9 @@ import BlogPostCard from '../components/BlogPostCard';
 import { frontMatter as blogPosts } from './blog/*.mdx';
 
 function blog() {
-
-  const sortedPosts = blogPosts.sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn))
-
+  const sortedPosts = blogPosts.sort(
+    (a, b) => new Date(b.publishedOn) - new Date(a.publishedOn)
+  );
 
   return (
     <Layout>
