@@ -19,7 +19,7 @@ import ThisBlog from '../public/static/images/project/thisBlog.png';
 function index() {
   const sortedPosts = blogPosts
     .sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn))
-    .slice(0, 2);
+    .slice(0, 3);
   return (
     <Layout>
       <Box>
