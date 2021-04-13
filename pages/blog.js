@@ -7,15 +7,20 @@ import BlogPostCard from '../components/BlogPostCard';
 
 import { frontMatter as blogPosts } from './blog/*.mdx';
 
-function blog() {
-  const sortedPosts = blogPosts.sort(
+export const getStaticProps = async () => {
+  const sortedPosts = await blogPosts.sort(
     (a, b) => new Date(b.publishedOn) - new Date(a.publishedOn)
   );
+  return {
+    props: { posts: sortedPosts },
+  };
+};
 
+function blog({ posts }) {
   return (
     <Layout>
       <Heading>Blog 📓</Heading>
-      {sortedPosts.map((frontMatter) => (
+      {posts.map((frontMatter) => (
         <BlogPostCard
           key={frontMatter.title}
           title={frontMatter.title}
