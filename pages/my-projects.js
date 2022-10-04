@@ -30,7 +30,7 @@ function portfolio() {
           <ProjectCard
             url="/my-projects/spoton-content-guidelines"
             projectImg={FullContentGuidelines}
-            projectName="SpotOn content guidelines & style guide"
+            projectName="SpotOn content guidelines & style guide "
             projectDesc="SpotOn was in a unique situation where 3/4ths of the designers were not native English speakers. So I created a simplified version of content guidelines and style guide they could easily use as a reference."
           />
           <ProjectCard
