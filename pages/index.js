@@ -1,20 +1,17 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import { Box, Button, Heading, Link, Text, Icon } from '@chakra-ui/react';
-import { FaWix } from 'react-icons/fa';
+import { Box, Button, Heading, Link, Text } from '@chakra-ui/react';
 
 import Layout from '../components/layouts/Layout';
 
 import SectionComp from '../components/SectionComp';
 import ExperienceCard from '../components/ExperienceCard';
 import { frontMatter as blogPosts } from './blog/*.mdx';
-import BlogPostCard from '../components/BlogPostCard';
-
 import ProjectCard from '../components/ProjectCard';
 
-import ExpatriantImg from '../public/static/images/project/expatriant.png';
-import ContactForm from '../public/static/images/project/contactForm.png';
-import ThisBlog from '../public/static/images/project/thisBlog.png';
+import ContentGuidelines from '../public/static/images/project/contentGuidelines.png';
+import FullContentGuidelines from '../public/static/images/project/fullContentGuidelines.png';
+import SpotOnWallet from '../public/static/images/project/spotOnWallet.png';
 
 function index() {
   const sortedPosts = blogPosts
@@ -30,18 +27,22 @@ function index() {
           I&apos;m Andrew Shannon
         </Heading>
         <Text mt="1.4rem" mb="1rem" as="p">
-          I&apos;m in the midst of transitioning from being a big data guy to
-          being a front end guy. I currently work as a UX writer at{' '}
-          <Icon as={FaWix} w={7} h={7} />. This is my dev blog that I&apos;ll
-          use to explore things I find interesting.
+        My 10-second elevator pitch is that I use words and data to guide users where they need to be in a digital or physical spaces. Right now, I'm the one and only content strategist & UX writer at SpotOn, where I promote content <Text as='b'>IS</Text> design to a team of 20+ designers and write for high priority products.
         </Text>
 
         <SectionComp title="Experience">
+        <ExperienceCard
+            company="SpotOn"
+            jobTitle="Content Strategist / UX Writer"
+            empStartDate="September 2021"
+            jobDescription="As the only UX writer with a team of 20+ designers, I create content guidelines, promote content IS design, and write content for high-priority products."
+          />
           <ExperienceCard
             company="Wix.com"
             jobTitle="UX Writer"
             empStartDate="February 2020"
-            jobDescription="I write clear concise microcopy for Wix's Stores mobile app and their new Point of Sale product. I also manage the localization process ford 22 supported languages."
+            empEndDate="September 2021"
+            jobDescription="I wrote clear and concise microcopy for Wix's Stores mobile app and their new Point of Sale product. I also manage the localization process for 22 supported languages."
           />
           <ExperienceCard
             company="Expatriant.com"
@@ -54,7 +55,7 @@ function index() {
             jobTitle="Business Analyst"
             empStartDate="July 2015"
             empEndDate="August 2018"
-            jobDescription="I performed data mining and munging activities as well as maintained all Cisco defect data in an enterprise Hadoop data lake."
+            jobDescription="I performed data mining and munging activities and maintained all Cisco defect data in an enterprise Hadoop data lake."
           />
           <Box m="1rem" align="center">
             <Link
@@ -66,35 +67,25 @@ function index() {
           </Box>
         </SectionComp>
 
-        <SectionComp title="Blog Posts">
-          {sortedPosts.map((frontMatter) => (
-            <BlogPostCard
-              key={frontMatter.title}
-              title={frontMatter.title}
-              summary={frontMatter.summary}
-              href={frontMatter.__resourcePath.replace('.mdx', '')}
-            />
-          ))}
-        </SectionComp>
 
-        <SectionComp title="Projects">
-          <ProjectCard
-            url="https://jobs.expatriant.com/"
-            projectImg={ExpatriantImg}
-            projectName="Expatriant Job Board"
-            projectDesc="A full stack job board app focused on helping expats in Russia find meaningful work. Built with Firebase Firestore, Node, Express and React. Scaled to more than 1000 active monthly users."
+        <SectionComp title="Recent Projects">
+        <ProjectCard
+            url="/my-projects/first-writer-at-spoton"
+            projectImg={ContentGuidelines}
+            projectName="First UX writer at SpotOn"
+            projectDesc="This is a case study on my experience working as the first UX writer on a large design team. It includes the thigns I've tried that worked to scale the content process."
           />
           <ProjectCard
-            url="https://contact.expatriant.com/residency"
-            projectImg={ContactForm}
-            projectName="Expatriant Contact Form and Auto Reply"
-            projectDesc="A contact form with validation that qualifies leads by auto replying with necessary info and booking link. Built with Next.js, Formik, Yum, Node.js and hosted on Vercel."
+            url="/my-projects/case-study-spoton-wallet"
+            projectImg={SpotOnWallet}
+            projectName="SpotOn Wallet"
+            projectDesc="As a strategically important product for SpotOn, I was integrated into the product team from inception until beta release. I wrote all of the content in the app and used the team's feedback to iterate quickly."
           />
           <ProjectCard
-            url="/"
-            projectImg={ThisBlog}
-            projectName="My Programming Blog (This Blog 🙂)"
-            projectDesc="This blog is to document my learnings, projects, exploration, fun...And everything in between. It's built with Next JS, MDX and hosted on Vercel."
+            url="/my-projects/spoton-content-guidelines"
+            projectImg={FullContentGuidelines}
+            projectName="SpotOn content guidelines & style guide"
+            projectDesc="SpotOn was in a unique situation where 3/4ths of the designers were not native English speakers. So I created a simplified version of content guidelines and style guide they could easily use as a reference."
           />
         </SectionComp>
       </Box>

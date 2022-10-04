@@ -47,7 +47,7 @@ function Footer() {
           />
         </Link>
       </Flex>
-      <Text m='2rem 0'>Built with Next.js and hosted on Vercel</Text>
+      <Text m='2rem 0'>Built with Next.js & Chakra UI and hosted on Vercel</Text>
     </Box>
   );
 }

@@ -8,8 +8,8 @@ function Layout({ children }) {
   return (
     <Box paddingBottom="10rem" minH="100vh" as="main">
       <NextSeo
-        title="Andrew Shannon - Frontend Dev"
-        description="This blog has things I find interesting on it."
+        title="Andrew Shannon - UX Writer"
+        description="This site documents my work as a UX writer & content strategist."
       />
       <Flex
         alignItems={{ base: 'flex-start', md: 'center' }}
