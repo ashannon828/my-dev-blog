@@ -6,7 +6,6 @@ import Layout from '../components/layouts/Layout';
 
 import SectionComp from '../components/SectionComp';
 import ExperienceCard from '../components/ExperienceCard';
-import { frontMatter as blogPosts } from './blog/*.mdx';
 import ProjectCard from '../components/ProjectCard';
 
 import ContentGuidelines from '../public/static/images/project/contentGuidelines.png';
@@ -14,9 +13,6 @@ import FullContentGuidelines from '../public/static/images/project/fullContentGu
 import SpotOnWallet from '../public/static/images/project/spotOnWallet.png';
 
 function index() {
-  const sortedPosts = blogPosts
-    .sort((a, b) => new Date(b.publishedOn) - new Date(a.publishedOn))
-    .slice(0, 3);
   return (
     <Layout>
       <Box>
@@ -27,11 +23,15 @@ function index() {
           I&apos;m Andrew Shannon
         </Heading>
         <Text mt="1.4rem" mb="1rem" as="p">
-        My 10-second elevator pitch is that I use words and data to guide users where they need to be in a digital or physical spaces. Right now, I'm the one and only content strategist & UX writer at SpotOn, where I promote content <Text as='b'>IS</Text> design to a team of 20+ designers and write for high priority products.
+          My 10-second elevator pitch is that I use words and data to guide
+          users where they need to be in digital and physical environments.
+          Right now, I'm the one and only content strategist & UX writer at
+          SpotOn, where I promote content <Text as="b">IS</Text> design to a
+          team of 20+ designers and write for high-priority products.
         </Text>
 
         <SectionComp title="Experience">
-        <ExperienceCard
+          <ExperienceCard
             company="SpotOn"
             jobTitle="Content Strategist / UX Writer"
             empStartDate="September 2021"
@@ -60,16 +60,15 @@ function index() {
           <Box m="1rem" align="center">
             <Link
               isExternal
-              href="https://drive.google.com/file/d/1ixbGdlON_pFiqtZ3mG83C8HnIZoInWzI/view"
+              href="https://docs.google.com/document/d/1XcWx4yNA4Mw6IE8NNwt5XC_ei0SngQiRSSem58ZqGp0/edit?usp=sharing"
             >
               <Button colorScheme="purple">View Resume</Button>
             </Link>
           </Box>
         </SectionComp>
 
-
         <SectionComp title="Recent Projects">
-        <ProjectCard
+          <ProjectCard
             url="/my-projects/first-writer-at-spoton"
             projectImg={ContentGuidelines}
             projectName="First UX writer at SpotOn"
