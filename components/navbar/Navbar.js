@@ -24,8 +24,8 @@ function Navbar() {
         </Center>
         <Flex alignItems="center">
           <MenuItem href="/about" text="About" />
-          <MenuItem href="/blog" text="Blog" />
-          <MenuItem href="/portfolio" text="Portfolio" />
+          {/* <MenuItem href="/blog" text="Blog" /> */}
+          <MenuItem href="/my-projects" text="My Projects" />
         </Flex>
       </Flex>
     </Flex>

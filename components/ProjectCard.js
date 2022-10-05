@@ -4,7 +4,7 @@ import { Box, Flex, Heading, Image, Link, Text } from '@chakra-ui/react';
 function ProjectCard({ url, projectImg, projectName, projectDesc }) {
   return (
     <Box mt="2rem">
-      <Link href={url} isExternal>
+      <Link href={url}>
         <Flex
           p={{ base: '1rem', md: '1.2rem' }}
           border="1px solid #E2E8F0"
