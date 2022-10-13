@@ -96,7 +96,7 @@ function caseStudy() {
         <Image
           border="1px solid #E2E8F0"
           borderRadius="15px"
-          src="https://res.cloudinary.com/dwhy1auam/image/upload/v1664979344/Portfolio%20site/SpotOn%20merchant%20wallet/Shannon_case_study_Wallet_pages-to-jpg-0008_pv6rau.jpg"
+          src="https://res.cloudinary.com/dwhy1auam/image/upload/v1665662857/Portfolio%20site/SpotOn%20merchant%20wallet/Shannon_case_study_Wallet_pages-to-jpg-0008_pv6rau_vvsk0l.jpg"
           alt="Landing page."
         ></Image>
       </Box>

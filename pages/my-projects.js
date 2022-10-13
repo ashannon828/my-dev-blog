@@ -7,6 +7,8 @@ import ProjectCard from '../components/ProjectCard';
 import ContentGuidelines from '../public/static/images/project/contentGuidelines.png';
 import FullContentGuidelines from '../public/static/images/project/fullContentGuidelines.png';
 import SpotOnWallet from '../public/static/images/project/spotOnWallet.png';
+import DeliverableExample from '../public/static/images/project/deliverableExample.jpg';
+import DesignSystemContent from '../public/static/images/project/toastComponent.jpg';
 
 function portfolio() {
   return (
@@ -33,9 +35,15 @@ function portfolio() {
         />
         <ProjectCard
           url="/my-projects/deliverable-example"
-          projectImg={FullContentGuidelines}
+          projectImg={DeliverableExample}
           projectName="An example UX writing deliverable"
           projectDesc="SpotOn was in a unique situation where 3/4ths of the designers were not native English speakers. So I created a simplified version of content guidelines and style guide they could easily use as a reference."
+        />
+        <ProjectCard
+          url="/my-projects/spoton-design-system-content"
+          projectImg={DesignSystemContent}
+          projectName="Design system content sample"
+          projectDesc="My contribution to SpotOn's design system is content guidelines, defining the format, and drafting the content for each component in the design system."
         />
       </Box>
     </Layout>
