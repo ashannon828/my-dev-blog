@@ -19,7 +19,7 @@ function portfolio() {
           url="/my-projects/first-writer-at-spoton"
           projectImg={ContentGuidelines}
           projectName="First UX writer at SpotOn"
-          projectDesc="This is a case study on my experience working as the first UX writer on a large design team. It includes the thigns I've tried that worked to scale the content process."
+          projectDesc="This is a case study of my experience working as the first UX writer on a large design team. It includes the things I've tried that worked to scale the content process."
         />
         <ProjectCard
           url="/my-projects/case-study-spoton-wallet"
@@ -34,16 +34,16 @@ function portfolio() {
           projectDesc="SpotOn was in a unique situation where 3/4ths of the designers were not native English speakers. So I created a simplified version of content guidelines and style guide they could easily use as a reference."
         />
         <ProjectCard
-          url="/my-projects/deliverable-example"
-          projectImg={DeliverableExample}
-          projectName="An example UX writing deliverable"
-          projectDesc="SpotOn was in a unique situation where 3/4ths of the designers were not native English speakers. So I created a simplified version of content guidelines and style guide they could easily use as a reference."
-        />
-        <ProjectCard
           url="/my-projects/spoton-design-system-content"
           projectImg={DesignSystemContent}
           projectName="Design system content sample"
           projectDesc="My contribution to SpotOn's design system is content guidelines, defining the format, and drafting the content for each component in the design system."
+        />
+        <ProjectCard
+          url="/my-projects/deliverable-example"
+          projectImg={DeliverableExample}
+          projectName="An example UX writing deliverable"
+          projectDesc="This project is a small demonstration of what I find works best as a UX writing deliverable."
         />
       </Box>
     </Layout>

@@ -72,7 +72,7 @@ function index() {
             url="/my-projects/first-writer-at-spoton"
             projectImg={ContentGuidelines}
             projectName="First UX writer at SpotOn"
-            projectDesc="This is a case study on my experience working as the first UX writer on a large design team. It includes the thigns I've tried that worked to scale the content process."
+            projectDesc="This is a case study of my experience working as the first UX writer on a large design team. It includes the things I've tried that worked to scale the content process."
           />
           <ProjectCard
             url="/my-projects/case-study-spoton-wallet"
